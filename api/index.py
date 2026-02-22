@@ -1,4 +1,7 @@
-from main4 import app
+import os
+import sys
 
-# Vercel needs "app" to be available at the module level
-# This file will be moved to api/index.py
+# Add the parent directory to sys.path so it can find main4.py
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from main4 import app
