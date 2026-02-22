@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Welcome, Admin!</h2>
+            <p>Here you can manage the application settings and user data.</p>
+        </section>
+        <section>
+            <h3>User Management</h3>
+            <p>Manage users and their roles.</p>
+            <!-- Add user management functionality here -->
+        </section>
+        <section>
+            <h3>Application Settings</h3>
+            <p>Configure application settings.</p>
+            <!-- Add application settings functionality here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} Your Company Name</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
